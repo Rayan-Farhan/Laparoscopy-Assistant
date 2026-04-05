@@ -1,0 +1,82 @@
+[
+  {
+    "track_id": 1,
+    "tool": "Grasper",
+    "class_id": 0,
+    "start_sec": 2.02,
+    "end_sec": 2.62,
+    "duration_sec": 0.6,
+    "mean_conf": 0.623,
+    "frame_count": 13
+  },
+  {
+    "track_id": 5,
+    "tool": "Grasper",
+    "class_id": 0,
+    "start_sec": 3.75,
+    "end_sec": 8.73,
+    "duration_sec": 4.98,
+    "mean_conf": 0.708,
+    "frame_count": 282
+  },
+  {
+    "track_id": 6,
+    "tool": "Grasper",
+    "class_id": 0,
+    "start_sec": 9.45,
+    "end_sec": 20.53,
+    "duration_sec": 11.08,
+    "mean_conf": 0.749,
+    "frame_count": 646
+  },
+  {
+    "track_id": 7,
+    "tool": "Grasper",
+    "class_id": 0,
+    "start_sec": 21.67,
+    "end_sec": 26.78,
+    "duration_sec": 5.12,
+    "mean_conf": 0.757,
+    "frame_count": 281
+  },
+  {
+    "track_id": 11,
+    "tool": "Grasper",
+    "class_id": 0,
+    "start_sec": 27.48,
+    "end_sec": 43.53,
+    "duration_sec": 16.05,
+    "mean_conf": 0.653,
+    "frame_count": 862
+  },
+  {
+    "track_id": 12,
+    "tool": "Grasper",
+    "class_id": 0,
+    "start_sec": 44.0,
+    "end_sec": 46.67,
+    "duration_sec": 2.67,
+    "mean_conf": 0.657,
+    "frame_count": 120
+  },
+  {
+    "track_id": 13,
+    "tool": "Grasper",
+    "class_id": 0,
+    "start_sec": 47.38,
+    "end_sec": 48.22,
+    "duration_sec": 0.83,
+    "mean_conf": 0.616,
+    "frame_count": 32
+  },
+  {
+    "track_id": 14,
+    "tool": "Grasper",
+    "class_id": 0,
+    "start_sec": 66.53,
+    "end_sec": 67.23,
+    "duration_sec": 0.7,
+    "mean_conf": 0.587,
+    "frame_count": 41
+  }
+]
