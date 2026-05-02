@@ -12,6 +12,7 @@ coverage.xml
 frontend
 dev.db
 local_laparoscopy.db
+test_surgeries
 
 # Node
 node_modules/
