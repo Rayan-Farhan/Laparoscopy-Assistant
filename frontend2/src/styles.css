@@ -1,0 +1,200 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Dark Clinical Workstation
+ * Charcoal canvas, hairline borders, restrained signal colors only.
+ * No gradients. No glows. Mono for all numeric / data / IDs.
+ */
+
+@theme inline {
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 6px;
+  --radius-2xl: 8px;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-signal-cyan: var(--signal-cyan);
+  --color-signal-amber: var(--signal-amber);
+  --color-signal-red: var(--signal-red);
+  --color-signal-green: var(--signal-green);
+  --color-signal-violet: var(--signal-violet);
+
+  --color-tool-grasper: var(--tool-grasper);
+  --color-tool-scissors: var(--tool-scissors);
+  --color-tool-clipper: var(--tool-clipper);
+  --color-tool-hook: var(--tool-hook);
+  --color-tool-irrigator: var(--tool-irrigator);
+  --color-tool-bipolar: var(--tool-bipolar);
+  --color-tool-specimen: var(--tool-specimen);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+:root {
+  --radius: 3px;
+
+  /* Charcoal canvas — true #0E1116 base */
+  --background: oklch(0.178 0.008 250);
+  --foreground: oklch(0.94 0.005 250);
+
+  --surface: oklch(0.215 0.008 250);
+  --surface-2: oklch(0.255 0.008 250);
+
+  --card: oklch(0.215 0.008 250);
+  --card-foreground: oklch(0.94 0.005 250);
+  --popover: oklch(0.235 0.008 250);
+  --popover-foreground: oklch(0.94 0.005 250);
+
+  --primary: oklch(0.78 0.12 200);            /* cyan signal as primary */
+  --primary-foreground: oklch(0.16 0.01 250);
+  --secondary: oklch(0.28 0.008 250);
+  --secondary-foreground: oklch(0.94 0.005 250);
+
+  --muted: oklch(0.255 0.008 250);
+  --muted-foreground: oklch(0.62 0.012 250);
+
+  --accent: oklch(0.30 0.008 250);
+  --accent-foreground: oklch(0.94 0.005 250);
+
+  --destructive: oklch(0.66 0.20 25);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(0.30 0.008 250);
+  --border-strong: oklch(0.40 0.008 250);
+  --input: oklch(0.26 0.008 250);
+  --ring: oklch(0.78 0.12 200);
+
+  /* Signal palette — amber/cyan console */
+  --signal-cyan: oklch(0.80 0.13 200);
+  --signal-amber: oklch(0.82 0.15 75);
+  --signal-red: oklch(0.66 0.20 25);
+  --signal-green: oklch(0.74 0.14 155);
+  --signal-violet: oklch(0.70 0.13 295);
+
+  /* Tool track colors (timeline lanes) */
+  --tool-grasper:   oklch(0.78 0.13 200);
+  --tool-scissors:  oklch(0.82 0.15 75);
+  --tool-clipper:   oklch(0.74 0.14 155);
+  --tool-hook:      oklch(0.70 0.13 295);
+  --tool-irrigator: oklch(0.72 0.10 230);
+  --tool-bipolar:   oklch(0.66 0.20 25);
+  --tool-specimen:  oklch(0.80 0.05 250);
+
+  --sidebar: oklch(0.155 0.008 250);
+  --sidebar-foreground: oklch(0.78 0.008 250);
+  --sidebar-primary: oklch(0.78 0.12 200);
+  --sidebar-primary-foreground: oklch(0.16 0.01 250);
+  --sidebar-accent: oklch(0.22 0.008 250);
+  --sidebar-accent-foreground: oklch(0.94 0.005 250);
+  --sidebar-border: oklch(0.26 0.008 250);
+  --sidebar-ring: oklch(0.78 0.12 200);
+
+  /* tracking + numerics */
+  --chart-1: var(--signal-cyan);
+  --chart-2: var(--signal-amber);
+  --chart-3: var(--signal-green);
+  --chart-4: var(--signal-violet);
+  --chart-5: var(--signal-red);
+}
+
+/* Force dark — this is a workstation, no light mode */
+html, body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  /* Tabular numerics everywhere by default for clinical readability */
+  .num, code, kbd, pre, samp, [data-mono] {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--signal-cyan) 35%, transparent);
+    color: var(--foreground);
+  }
+
+  /* Hairline scrollbars */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 2px;
+    border: 2px solid var(--background);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--muted-foreground); }
+}
+
+/* Utility: hairline grid background for dashboard panels */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--border) 60%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--border) 60%, transparent) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Scanline accent — extremely subtle */
+.scanlines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    color-mix(in oklab, var(--foreground) 2%, transparent) 3px,
+    color-mix(in oklab, var(--foreground) 2%, transparent) 4px
+  );
+}
+
+/* Status dot pulse, very subtle */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
