@@ -9,6 +9,9 @@ __pycache__/
 .coverage
 coverage.xml
 .venv/
+frontend
+dev.db
+local_laparoscopy.db
 
 # Node
 node_modules/
